@@ -17,6 +17,7 @@ console.log(addToCollection('Album3', 'Artist3', 2003));
 console.log(addToCollection('Album4', 'Artist4', 2004));
 console.log(addToCollection('Album5', 'Artist5', 2005));
 console.log(addToCollection('Album6', 'Artist6', 2006));
+console.log(addToCollection('TestAlbum', 'Artist1', 2007));
 
 console.log(collection);
 
@@ -28,3 +29,18 @@ function showCollection (arr){
 }
 
 showCollection(collection);
+
+function findByArtist (artist){
+    let results = [];
+    for (album of collection){
+        if (album.artist === artist){
+            results.push(album);
+        }
+    }
+    return results;
+}
+
+//two in collection
+console.log(findByArtist('Artist1'));
+//not in collection
+console.log(findByArtist('Artist7'))
