@@ -19,3 +19,12 @@ console.log(addToCollection('Album5', 'Artist5', 2005));
 console.log(addToCollection('Album6', 'Artist6', 2006));
 
 console.log(collection);
+
+function showCollection (arr){
+    console.log(arr.length);
+    for (album of arr) {
+        console.log(album.title + ' by ' + album.artist + ', published in ' + album.yearPublished);
+    }
+}
+
+showCollection(collection);
